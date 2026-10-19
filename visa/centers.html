@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>دليل مراكز الفيزا — دوري</title>
+  <meta name="description" content="دليل مراكز التأشيرات في الجزائر والمغرب وتونس: الشركة المعتمدة لكل سفارة، المدن، الروابط الرسمية للحجز، ومتى تُفتح المواعيد.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    :root { --brand: #1d4ed8; --brand-soft: #dde7fb; --accent: #b45309; --ok: #15803d; }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --brand: #7aa2f7; --brand-ink: #0b1633; --brand-soft: #1b2747; --accent: #f59e0b; --ok: #4ade80; } }
+    :root[data-theme="dark"] { --brand: #7aa2f7; --brand-ink: #0b1633; --brand-soft: #1b2747; --accent: #f59e0b; --ok: #4ade80; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 32px clamp(16px, 4vw, 48px) 80px; }
+    .intro h1 { font-size: clamp(1.7rem, 4vw, 2.6rem); }
+    .filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 20px 0; }
+    .filters .btn[aria-pressed="true"] { background: var(--brand); color: var(--brand-ink); border-color: var(--brand); }
+    .filters input { flex: 1 1 220px; margin: 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+    .center { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; display: flex; flex-direction: column; gap: 10px; box-shadow: var(--shadow); }
+    .center header { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+    .center h2 { font-size: 1.2rem; margin: 0; }
+    .center .from { color: var(--muted); font-size: .88rem; }
+    .provider { font-weight: 700; color: var(--brand); }
+    .badge { font-size: .75rem; font-weight: 600; padding: 3px 10px; border-radius: 999px; white-space: nowrap; }
+    .badge.ok { background: color-mix(in srgb, var(--ok) 15%, transparent); color: var(--ok); }
+    .badge.check { background: color-mix(in srgb, var(--accent) 15%, transparent); color: var(--accent); }
+    .cities { display: flex; flex-wrap: wrap; gap: 6px; }
+    .cities span { background: var(--surface-2); border-radius: 8px; padding: 2px 10px; font-size: .85rem; }
+    .info { font-size: .9rem; color: var(--muted); margin: 0; }
+    .info b { color: var(--text); }
+    .links { display: flex; flex-direction: column; gap: 8px; margin-top: auto; padding-top: 6px; }
+    .links a { justify-content: space-between; }
+    .links small { direction: ltr; color: var(--muted); font-weight: 400; font-size: .75rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 55%; }
+    .links .btn.primary small { color: inherit; opacity: .8; }
+    .rules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+    .rules div { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; }
+    .rules h3 { font-size: 1.05rem; }
+    .rules p { margin: 0; color: var(--muted); font-size: .92rem; }
+    .none { text-align: center; color: var(--muted); padding: 40px; grid-column: 1 / -1; }
+    @media (max-width: 700px) { .rules { grid-template-columns: 1fr; } .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="دوري">
+      <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect x="5" y="4" width="22" height="25" rx="3" fill="currentColor" opacity=".15"/><rect x="5" y="4" width="22" height="25" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="14" r="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M11 23h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>دوري</span>
+    </a>
+    <nav class="topnav">
+      <a href="./">أدوات الملف</a>
+      <a href="centers.html" aria-current="page">دليل المراكز</a>
+      <button class="btn ghost small" id="themeToggle" type="button" aria-label="تبديل الوضع الليلي">◐</button>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="intro">
+      <p class="eyebrow">الروابط الرسمية فقط — بلا سماسرة</p>
+      <h1>دليل مراكز الفيزا</h1>
+      <p class="lead">لكل سفارة شركة واحدة معتمدة لاستقبال الطلبات. هنا تجد الشركة الصحيحة، مدنها، والرابط الرسمي للحجز، وما هو معروف عن مواعيد فتح الحجز. <b>الحجز نفسه مجاني</b> — لا تدفع إلا الرسوم المعلنة.</p>
+    </section>
+
+    <div class="filters" role="group" aria-label="بلد الإقامة">
+      <button class="btn ghost" data-country="all" aria-pressed="true">الكل</button>
+      <button class="btn ghost" data-country="dz" aria-pressed="false">🇩🇿 الجزائر</button>
+      <button class="btn ghost" data-country="ma" aria-pressed="false">🇲🇦 المغرب</button>
+      <button class="btn ghost" data-country="tn" aria-pressed="false">🇹🇳 تونس</button>
+      <input type="search" id="q" placeholder="ابحث: فرنسا، BLS، وهران…" aria-label="بحث">
+    </div>
+
+    <div class="grid" id="grid"></div>
+
+    <p class="hint small" style="margin-top:20px">
+      <span class="badge ok">مؤكد</span> المعلومة من موقع السفارة أو الشركة الرسمية.
+      <span class="badge check">تحقّق</span> المصادر متضاربة أو قديمة؛ افتح موقع السفارة أولًا.
+      آخر مراجعة لهذا الدليل: <b id="checked"></b>. الشركات تتغير أحيانًا — موقع السفارة هو المرجع دائمًا.
+    </p>
+
+    <section class="rules">
+      <div><h3>⏰ متى تُفتح المواعيد؟</h3><p>أغلب المراكز تضيف مواعيد على دفعات وفي أوقات غير معلنة، وتنفد بسرعة. الأفضل: ادخل حسابك صباحًا باكرًا، واتبع الصفحة الرسمية للمركز على فيسبوك حيث تُنشر الإعلانات. ما نعرفه بدقة مكتوب في بطاقة كل مركز.</p></div>
+      <div><h3>🚫 لا تشترِ موعدًا</h3><p>المواعيد مجانية. شراء موعد من وسيط قد يؤدي إلى إلغائه أو رفض ملفك، وبيانات جوازك تصبح بيد مجهول. بعض المراكز أصبحت تربط الموعد باسم صاحب الجواز.</p></div>
+      <div><h3>🔗 تأكد من الرابط</h3><p>قبل إدخال أي بيانات أو دفع، تأكد أن الرابط يطابق المكتوب هنا أو الموجود في موقع السفارة. صفحات مزيفة تنسخ شكل المواقع الرسمية لسرقة المال والبيانات.</p></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>دوري — دليل مستقل غير تابع لأي سفارة أو شركة تأشيرات.</p>
+  </footer>
+
+  <script src="centers.js"></script>
+</body>
+</html>
