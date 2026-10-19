@@ -22,3 +22,10 @@
 ## التشغيل والنشر
 
 موقع ثابت بالكامل: افتح `index.html` في المتصفح، أو انشره على GitHub Pages / Netlify دون أي إعداد.
+
+---
+
+## AutoBridge DZ
+
+منصة وساطة لاستيراد السيارات (عربي/فرنسي) — تطبيق Next.js + Supabase مستقل في المجلد [`autobridge/`](autobridge/README.md).
+Plateforme d'intermédiation automobile (arabe/français) — application Next.js + Supabase indépendante dans [`autobridge/`](autobridge/README.md).

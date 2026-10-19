@@ -1,0 +1,126 @@
+{
+  "title": "حسابي",
+  "navOverview": "نظرة عامة",
+  "navRequests": "طلباتي",
+  "navFavorites": "المفضلة",
+  "navEstimates": "التقديرات",
+  "navNotifications": "الإشعارات",
+  "navProfile": "الملف الشخصي",
+  "navPrivacy": "الخصوصية",
+  "welcome": "مرحبًا {name}",
+  "overviewSubtitle": "تابع طلباتك وعروض الأسعار والسيارات المحفوظة.",
+  "newRequest": "طلب جديد",
+  "passwordUpdated": "تم تحديث كلمة المرور.",
+  "openRequests": "طلبات قيد المعالجة",
+  "savedVehicles": "سيارات محفوظة",
+  "unreadNotifications": "إشعارات غير مقروءة",
+  "recentRequests": "أحدث الطلبات",
+  "viewAll": "عرض الكل",
+  "noRequests": "لا توجد طلبات حاليًا",
+  "noRequestsText": "تصفح الإعلانات أو أرسل طلب بحث مخصص.",
+  "browse": "تصفح السيارات",
+  "latestNotifications": "آخر الإشعارات",
+  "becomeSupplier": "كن موردًا",
+  "becomeSupplierText": "انشر سيارات بعد اعتماد مؤسستك.",
+  "becomePartner": "كن شريك خدمات",
+  "becomePartnerText": "الفحص، النقل، العبور… استلم طلبات خدمة.",
+  "email": "البريد الإلكتروني",
+  "emailHint": "لا يمكن تعديل عنوان تسجيل الدخول هنا.",
+  "fullName": "الاسم الكامل",
+  "phone": "الهاتف",
+  "wilaya": "الولاية",
+  "language": "اللغة المفضلة",
+  "notifyEmail": "استلام الإشعارات عبر البريد الإلكتروني",
+  "notifyInAppAlways": "تبقى الإشعارات متاحة دائمًا في حسابك.",
+  "profileSubtitle": "لا نجمع إلا المعلومات اللازمة لمعالجة طلباتك.",
+  "personalInfo": "المعلومات الشخصية",
+  "changePassword": "تغيير كلمة المرور",
+  "requestsSubtitle": "جميع طلبات الشراء وحالتها.",
+  "reference": "المرجع",
+  "vehicle": "السيارة",
+  "type": "النوع",
+  "status": "الحالة",
+  "updated": "آخر تحديث",
+  "favoritesSubtitle": "السيارات التي حفظتها.",
+  "favoritesWithdrawn": "{count, plural, one {سيارة محفوظة لم تعد منشورة.} two {سيارتان محفوظتان لم تعودا منشورتين.} few {# سيارات محفوظة لم تعد منشورة.} many {# سيارة محفوظة لم تعد منشورة.} other {# سيارة محفوظة لم تعد منشورة.}}",
+  "noFavorites": "لا توجد سيارات محفوظة",
+  "estimatesSubtitle": "تقديراتك المحفوظة مع نسخة الافتراضات المستخدمة.",
+  "newEstimate": "تقدير جديد",
+  "vehiclePrice": "سعر السيارة",
+  "estimatedTotal": "المجموع التقديري",
+  "completeness": "الاكتمال",
+  "useInRequest": "استخدام في طلب",
+  "noEstimates": "لا توجد تقديرات محفوظة",
+  "notificationsSubtitle": "تحديثات طلباتك وحساباتك.",
+  "markAllRead": "تحديد الكل كمقروء",
+  "unread": "غير مقروء",
+  "noNotifications": "لا توجد إشعارات",
+  "privacySubtitle": "مارس حقوقك المتعلقة ببياناتك الشخصية.",
+  "dataRequestTitle": "طلب يخص بياناتك",
+  "dataRequestHint": "الاطلاع أو التصحيح أو الحذف: يعالج فريقنا كل طلب ويبلغك بمتابعته.",
+  "sendDataRequest": "إرسال الطلب",
+  "dataRequestSent": "تم تسجيل الطلب.",
+  "dataRequestKind": "نوع الطلب",
+  "dataRequestDetails": "تفاصيل (اختياري)",
+  "deletionExplain": "عند الحذف، تُزال بياناتك الشخصية؛ وتُجهَّل السجلات التي يفرض القانون الاحتفاظ بها.",
+  "myDataRequests": "طلباتي",
+  "readPrivacy": "قراءة سياسة الخصوصية",
+  "notificationTypes": {
+    "generic": "إشعار جديد.",
+    "request": {
+      "status_changed": "الطلب {reference}: {status}.",
+      "created": "طلب شراء جديد {reference}.",
+      "customer_status_changed": "قام الزبون بتعديل الطلب {reference}: {status}.",
+      "forwarded_to_supplier": "طلب جديد محال إليك: {reference}.",
+      "assigned_to_you": "تم إسناد طلب إليك.",
+      "legal_review": "المراجعة القانونية للطلب {reference}: {decision}.",
+      "milestone": "الطلب {reference}: {kind}."
+    },
+    "quotation": {
+      "submitted": "عرض سعر جديد للطلب {reference}.",
+      "received": "استلمت عرض سعر ({quotation}) للطلب {reference}.",
+      "rejected": "تم رفض عرضك {quotation}: {reason}",
+      "withdrawn": "تم سحب العرض {quotation}.",
+      "accepted": "تم قبول العرض {quotation} (الطلب {reference}).",
+      "declined": "تم رفض العرض {quotation} (الطلب {reference})."
+    },
+    "supplier": {
+      "application_submitted": "طلب انضمام مورد جديد: {name}",
+      "status": {
+        "approved": "تم اعتماد حساب المورد «{name}».",
+        "rejected": "تم رفض طلب المورد: {reason}",
+        "suspended": "تم إيقاف حساب المورد: {reason}",
+        "pending": "طلب المورد قيد المراجعة مجددًا."
+      }
+    },
+    "partner": {
+      "application_submitted": "طلب انضمام شريك جديد: {name}",
+      "status": {
+        "approved": "تم اعتماد حساب الشريك «{name}».",
+        "rejected": "تم رفض طلب الشريك: {reason}",
+        "suspended": "تم إيقاف حساب الشريك: {reason}",
+        "pending": "طلب الشريك قيد المراجعة مجددًا."
+      }
+    },
+    "vehicle": {
+      "pending_review": "إعلان بحاجة إلى مراجعة: {slug}",
+      "approved": "تم نشر إعلانك {slug}.",
+      "rejected": "تم رفض إعلانك {slug}: {reason}"
+    },
+    "report": {
+      "created": "بلاغ جديد عن إعلان ({reason})."
+    },
+    "data_request": {
+      "created": "طلب جديد يخص البيانات الشخصية ({kind})."
+    },
+    "service_request": {
+      "created": "طلب خدمة جديد: {reference}.",
+      "status_changed": "طلب الخدمة {reference}: {status}."
+    },
+    "service_quote": {
+      "submitted": "عرض خدمة جديد للطلب {reference}.",
+      "accepted": "تم قبول عرضك للطلب {reference}.",
+      "declined": "تم رفض عرضك للطلب {reference}."
+    }
+  }
+}

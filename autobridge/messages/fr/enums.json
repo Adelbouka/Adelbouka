@@ -1,0 +1,223 @@
+{
+  "fuel": {
+    "petrol": "Essence",
+    "diesel": "Diesel",
+    "hybrid": "Hybride",
+    "plug_in_hybrid": "Hybride rechargeable",
+    "electric": "Électrique",
+    "lpg": "GPL",
+    "other": "Autre"
+  },
+  "transmission": {
+    "manual": "Manuelle",
+    "automatic": "Automatique"
+  },
+  "body": {
+    "sedan": "Berline",
+    "hatchback": "Compacte",
+    "suv": "SUV",
+    "crossover": "Crossover",
+    "pickup": "Pick-up",
+    "van": "Utilitaire",
+    "coupe": "Coupé",
+    "wagon": "Break",
+    "convertible": "Cabriolet",
+    "minivan": "Monospace",
+    "other": "Autre"
+  },
+  "condition": {
+    "new": "Neuf",
+    "used": "Occasion"
+  },
+  "listingStatus": {
+    "draft": "Brouillon",
+    "pending_review": "En cours d'examen",
+    "published": "Publiée",
+    "rejected": "Refusée",
+    "archived": "Archivée"
+  },
+  "availability": {
+    "available": "Disponible",
+    "reserved": "Réservée",
+    "sold": "Vendue",
+    "unavailable": "Indisponible"
+  },
+  "requestStatus": {
+    "draft": "Brouillon",
+    "submitted": "Envoyée",
+    "under_review": "En cours d'examen",
+    "supplier_contacted": "Fournisseur contacté",
+    "quotation_received": "Devis reçu (en vérification)",
+    "awaiting_customer_decision": "En attente de votre décision",
+    "accepted": "Devis accepté",
+    "in_progress": "En cours",
+    "completed": "Terminée",
+    "cancelled": "Annulée",
+    "rejected": "Refusée"
+  },
+  "requestAction": {
+    "submitted": "Envoyer la demande",
+    "under_review": "Prendre en charge",
+    "supplier_contacted": "Transmettre au fournisseur",
+    "quotation_received": "Marquer devis reçu",
+    "awaiting_customer_decision": "Attendre la décision du client",
+    "accepted": "Accepter",
+    "in_progress": "Démarrer le traitement",
+    "completed": "Marquer comme terminée",
+    "cancelled": "Annuler la demande",
+    "rejected": "Refuser la demande",
+    "draft": "Brouillon"
+  },
+  "legalReview": {
+    "not_required": "Non requis",
+    "pending": "En attente",
+    "approved": "Approuvé",
+    "blocked": "Bloqué"
+  },
+  "quotationStatus": {
+    "submitted": "En vérification",
+    "sent": "Envoyé au client",
+    "accepted": "Accepté",
+    "declined": "Décliné",
+    "withdrawn": "Retiré",
+    "rejected": "Refusé par l'équipe",
+    "expired": "Expiré"
+  },
+  "feeKind": {
+    "vehicle_price": "Prix du véhicule",
+    "domestic_transport": "Transport local (pays d'origine)",
+    "international_shipping": "Transport international",
+    "insurance": "Assurance",
+    "inspection": "Inspection",
+    "taxes_and_customs": "Droits et taxes (estimation)",
+    "documentation_admin": "Documents et frais administratifs",
+    "platform_service_fee": "Frais de service de la plateforme",
+    "partner_service_fee": "Honoraires de partenaire",
+    "other": "Autre"
+  },
+  "feeParty": {
+    "supplier": "Fournisseur",
+    "platform": "AutoBridge DZ",
+    "partner": "Partenaire indépendant",
+    "public_authority": "Administration publique",
+    "other": "Autre tiers"
+  },
+  "businessStatus": {
+    "pending": "En attente d'examen",
+    "approved": "Approuvé",
+    "rejected": "Refusé",
+    "suspended": "Suspendu"
+  },
+  "verificationCheck": {
+    "business_registration": "Registre de commerce",
+    "tax_registration": "Immatriculation fiscale",
+    "representative_identity": "Identité du représentant",
+    "business_address": "Adresse de l'entreprise",
+    "phone_contact": "Contact téléphonique",
+    "email_contact": "Adresse e-mail",
+    "site_visit": "Visite sur place",
+    "trade_references": "Références commerciales",
+    "other": "Autre contrôle"
+  },
+  "verificationResult": {
+    "passed": "Concluant",
+    "failed": "Non concluant",
+    "inconclusive": "Indéterminé"
+  },
+  "milestone": {
+    "supplier_confirmed_availability": "Disponibilité confirmée par le fournisseur",
+    "vehicle_inspected": "Véhicule inspecté",
+    "vehicle_purchased": "Véhicule acheté",
+    "export_documents_ready": "Documents d'exportation prêts",
+    "shipped": "Expédié",
+    "arrived_at_port": "Arrivé au port",
+    "customs_cleared": "Dédouané",
+    "delivered_to_customer": "Livré au client",
+    "other": "Autre étape"
+  },
+  "serviceStatus": {
+    "requested": "Demandé",
+    "quoted": "Devis envoyé",
+    "accepted": "Accepté",
+    "in_progress": "En cours",
+    "completed": "Terminé",
+    "cancelled": "Annulé"
+  },
+  "serviceQuoteStatus": {
+    "submitted": "Soumis",
+    "accepted": "Accepté",
+    "declined": "Décliné",
+    "withdrawn": "Retiré"
+  },
+  "contactMethod": {
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "whatsapp": "WhatsApp (contact manuel)"
+  },
+  "documentType": {
+    "business_registration": "Extrait du registre de commerce",
+    "tax_registration": "Attestation fiscale",
+    "representative_id": "Pièce d'identité du représentant",
+    "proof_of_address": "Justificatif d'adresse",
+    "insurance_certificate": "Attestation d'assurance",
+    "professional_license": "Agrément professionnel",
+    "other": "Autre document"
+  },
+  "reportReason": {
+    "incorrect_information": "Informations incorrectes",
+    "suspected_fraud": "Suspicion de fraude",
+    "no_longer_available": "Véhicule plus disponible",
+    "duplicate": "Annonce en double",
+    "inappropriate": "Contenu inapproprié",
+    "other": "Autre"
+  },
+  "reportStatus": {
+    "open": "Ouvert",
+    "reviewing": "En cours",
+    "resolved": "Résolu",
+    "dismissed": "Classé sans suite"
+  },
+  "dataRequestKind": {
+    "access": "Accès à mes données",
+    "correction": "Rectification",
+    "deletion": "Suppression du compte"
+  },
+  "dataRequestStatus": {
+    "open": "Ouverte",
+    "in_progress": "En cours",
+    "completed": "Traitée",
+    "rejected": "Refusée"
+  },
+  "role": {
+    "admin": "Administrateur",
+    "staff": "Équipe"
+  },
+  "ruleMethod": {
+    "fixed": "Montant fixe",
+    "percent_of_price": "% du prix du véhicule",
+    "quote_required": "Sur devis / évaluation"
+  },
+  "ruleSetStatus": {
+    "draft": "Brouillon",
+    "active": "Active",
+    "retired": "Archivée"
+  },
+  "sort": {
+    "newest": "Plus récentes",
+    "price_asc": "Prix croissant",
+    "price_desc": "Prix décroissant",
+    "year_desc": "Année (récente d'abord)",
+    "year_asc": "Année (ancienne d'abord)",
+    "mileage_asc": "Kilométrage le plus bas"
+  },
+  "requestType": {
+    "listed_vehicle": "Véhicule d'une annonce",
+    "custom_search": "Recherche personnalisée"
+  },
+  "actorRole": {
+    "customer": "Client",
+    "staff": "Équipe AutoBridge",
+    "supplier": "Fournisseur",
+    "system": "Automatique"
+  }
+}
