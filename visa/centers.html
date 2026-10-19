@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>دليل مراكز الفيزا — دوري</title>
-  <meta name="description" content="دليل مراكز التأشيرات في الجزائر والمغرب وتونس: الشركة المعتمدة لكل سفارة، المدن، الروابط الرسمية للحجز، ومتى تُفتح المواعيد.">
+  <title>مراكز الفيزا في الجزائر — دوري</title>
+  <meta name="description" content="دليل مراكز التأشيرات في الجزائر: الجهة المعتمدة لكل سفارة، الولايات، الروابط الرسمية للحجز، وقواعد المواعيد.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -58,17 +58,18 @@
 
   <main class="wrap">
     <section class="intro">
-      <p class="eyebrow">الروابط الرسمية فقط — بلا سماسرة</p>
-      <h1>دليل مراكز الفيزا</h1>
+      <p class="eyebrow">🇩🇿 للجزائريين — الروابط الرسمية فقط، بلا سماسرة</p>
+      <h1>مراكز الفيزا في الجزائر</h1>
       <p class="lead">لكل سفارة شركة واحدة معتمدة لاستقبال الطلبات. هنا تجد الشركة الصحيحة، مدنها، والرابط الرسمي للحجز، وما هو معروف عن مواعيد فتح الحجز. <b>الحجز نفسه مجاني</b> — لا تدفع إلا الرسوم المعلنة.</p>
     </section>
 
-    <div class="filters" role="group" aria-label="بلد الإقامة">
-      <button class="btn ghost" data-country="all" aria-pressed="true">الكل</button>
-      <button class="btn ghost" data-country="dz" aria-pressed="false">🇩🇿 الجزائر</button>
-      <button class="btn ghost" data-country="ma" aria-pressed="false">🇲🇦 المغرب</button>
-      <button class="btn ghost" data-country="tn" aria-pressed="false">🇹🇳 تونس</button>
-      <input type="search" id="q" placeholder="ابحث: فرنسا، BLS، وهران…" aria-label="بحث">
+    <div class="filters" role="group" aria-label="تصفية">
+      <button class="btn ghost" data-group="all" aria-pressed="true">الكل</button>
+      <button class="btn ghost" data-group="schengen" aria-pressed="false">🇪🇺 شنغن</button>
+      <button class="btn ghost" data-group="other" aria-pressed="false">🌍 خارج شنغن</button>
+      <select id="cityFilter" aria-label="الولاية" style="width:auto;margin:0"></select>
+      <input type="search" id="q" placeholder="ابحث: فرنسا، BLS، Capago…" aria-label="بحث">
+      <span class="muted small"><b id="count"></b> وجهة</span>
     </div>
 
     <div class="grid" id="grid"></div>
@@ -80,8 +81,8 @@
     </p>
 
     <section class="rules">
-      <div><h3>⏰ متى تُفتح المواعيد؟</h3><p>أغلب المراكز تضيف مواعيد على دفعات وفي أوقات غير معلنة، وتنفد بسرعة. الأفضل: ادخل حسابك صباحًا باكرًا، واتبع الصفحة الرسمية للمركز على فيسبوك حيث تُنشر الإعلانات. ما نعرفه بدقة مكتوب في بطاقة كل مركز.</p></div>
-      <div><h3>🚫 لا تشترِ موعدًا</h3><p>المواعيد مجانية. شراء موعد من وسيط قد يؤدي إلى إلغائه أو رفض ملفك، وبيانات جوازك تصبح بيد مجهول. بعض المراكز أصبحت تربط الموعد باسم صاحب الجواز.</p></div>
+      <div><h3>⏰ متى تُفتح المواعيد؟</h3><p>أغلب المراكز في الجزائر تضيف مواعيد على دفعات وفي أوقات غير معلنة، وتنفد بسرعة. الأفضل: ادخل حسابك صباحًا باكرًا، واتبع الصفحة الرسمية للمركز على فيسبوك حيث تُنشر الإعلانات. ما نعرفه بدقة مكتوب في بطاقة كل مركز.</p></div>
+      <div><h3>🚫 لا تشترِ موعدًا</h3><p>المواعيد مجانية. شراء موعد من وسيط قد يؤدي إلى إلغائه أو رفض ملفك، وبيانات جوازك تصبح بيد مجهول. أغلب المراكز اليوم تطلب الدفع على الإنترنت وتربط الموعد بصاحب الجواز.</p></div>
       <div><h3>🔗 تأكد من الرابط</h3><p>قبل إدخال أي بيانات أو دفع، تأكد أن الرابط يطابق المكتوب هنا أو الموجود في موقع السفارة. صفحات مزيفة تنسخ شكل المواقع الرسمية لسرقة المال والبيانات.</p></div>
     </section>
   </main>
