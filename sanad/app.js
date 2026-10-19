@@ -25,7 +25,12 @@
       "اخرج فورًا وأغلق الأبواب خلفك، ولا تعد لأخذ أي شيء.",
       "ازحف تحت الدخان، وتحسّس الباب بظهر يدك قبل فتحه.",
       "إن اشتعلت ملابسك: قف – انبطح – تدحرج.",
-      "التقِ عند نقطة الالتقاء الأولى وعُدّ الأفراد، ثم اتصل بالدفاع المدني."] },
+      "التقِ عند نقطة الالتقاء الأولى وعُدّ الأفراد، ثم اتصل بالحماية المدنية (14)."] },
+    { id: "wildfire", icon: "🌲", name: "حرائق الغابات", steps: [
+      "إن اقتربت النار لا تنتظر: غادر مبكرًا عكس اتجاه الريح وعبر الطرق المفتوحة.",
+      "أغلق النوافذ والأبواب، وأبعد الحطب والقارورات (غاز البوتان) عن البيت، واملأ أوعية بالماء.",
+      "غطِّ الأنف والفم بقماش مبلل لتقليل استنشاق الدخان.",
+      "بلّغ فورًا عن أي دخان في الغابة على الرقم 14، ولا تشعل النار صيفًا."] },
     { id: "heat", icon: "☀️", name: "موجة حر", steps: [
       "ابقَ في الداخل بين ١١ صباحًا و٤ عصرًا، واشرب الماء قبل الشعور بالعطش.",
       "انتبه لكبار السن والرضّع والمرضى — هم الأكثر عرضة لضربة الشمس.",
@@ -89,13 +94,13 @@
 
   const blank = () => ({
     step: 0,
-    fields: { days: "3" },
+    fields: { days: "3", ambulance: "14", fire: "1055", police: "17" },
     members: [{ name: "", age: "", blood: "", phone: "", allergies: "", meds: "" }],
     contacts: [
       { name: "", relation: "", phone: "", where: "داخل المدينة" },
       { name: "", relation: "", phone: "", where: "خارج المدينة" },
     ],
-    hazards: ["fire", "power"],
+    hazards: ["quake", "wildfire", "heat"],
     kit: {},
     done: false,
   });
@@ -271,7 +276,7 @@
         <section>
           <h3>أرقام الطوارئ</h3>
           <table><tbody>
-            <tr><th>الإسعاف</th><td>${val(f.ambulance)}</td><th>الدفاع المدني</th><td>${val(f.fire)}</td><th>الشرطة</th><td>${val(f.police)}</td></tr>
+            <tr><th>الحماية المدنية</th><td>${val(f.ambulance)}</td><th>الدرك الوطني</th><td>${val(f.fire)}</td><th>الشرطة</th><td>${val(f.police)}</td></tr>
             <tr><th>الطبيب</th><td colspan="2">${val(f.doctor)}</td><th>المدرسة</th><td colspan="2">${val(f.school)}</td></tr>
           </tbody></table>
         </section>
@@ -329,7 +334,7 @@
               <div><span>نلتقي عند</span><b>${val(f.meet1)}</b></div>
               <div><span>وإلا</span><b>${val(f.meet2)}</b></div>
               ${far ? `<div><span>اتصل بـ</span><b>${esc(far.name || far.relation)} <bdi dir="ltr">${esc(far.phone)}</bdi></b></div>` : ""}
-              <div><span>الإسعاف</span><b>${val(f.ambulance)}</b></div>
+              <div><span>الحماية المدنية</span><b>${val(f.ambulance)}</b></div>
               <div><span>فصيلة الدم</span><b>${val(m.blood)}</b></div>
               ${m.allergies ? `<div><span>حساسية</span><b>${esc(m.allergies)}</b></div>` : ""}
               ${m.meds ? `<div><span>صحة</span><b>${esc(m.meds)}</b></div>` : ""}

@@ -3,195 +3,186 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>سَنَد — خطة طوارئ عائلتك</title>
-  <meta name="description" content="سَنَد: أداة عربية مجانية تبني لعائلتك خطة طوارئ كاملة في دقائق — جهات الاتصال، نقاط الالتقاء، الأدوية، حقيبة الطوارئ، وبطاقات جيب قابلة للطباعة. كل البيانات تبقى على جهازك.">
+  <title>دوري — رفيقك لموعد الفيزا</title>
+  <meta name="description" content="دوري: جهّز ملف تأشيرتك قبل الموعد — قائمة وثائق حسب وضعك، حاسبة ٩٠/١٨٠ يومًا لشنغن، عدّاد للموعد، أسئلة المقابلة، وتحذيرات من النصب. مجاني وبياناتك تبقى على جهازك.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    :root { --brand: #006233; --brand-soft: #dcefe5; --accent: #d21034; }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --brand: #34c47c; --brand-ink: #04220f; --brand-soft: #12301f; --accent: #ff5a6e; } }
+    :root[data-theme="dark"] { --brand: #34c47c; --brand-ink: #04220f; --brand-soft: #12301f; --accent: #ff5a6e; }
+    .tabs { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 20px; }
+    .tabs button { flex: 1 1 140px; }
+    .tabs button[aria-selected="true"] { background: var(--brand); color: var(--brand-ink); border-color: var(--brand); }
+    .tool { display: none; }
+    .tool.active { display: block; animation: fade .25s ease; }
+    .stay { display: grid; grid-template-columns: 1fr 1fr auto; gap: 0 12px; align-items: end; background: var(--surface-2); border-radius: 12px; padding: 12px 12px 0; }
+    .stay .remove { position: static; margin-bottom: 18px; }
+    .result { background: var(--brand-soft); border-radius: 12px; padding: 18px; margin-top: 18px; }
+    .result.bad { background: color-mix(in srgb, var(--danger) 14%, transparent); }
+    .big { font-size: 2.4rem; font-weight: 700; color: var(--brand); line-height: 1.1; }
+    .result.bad .big { color: var(--danger); }
+    .timeline { list-style: none; padding: 0; margin: 16px 0 0; }
+    .timeline li { display: grid; grid-template-columns: 120px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px dashed var(--line); }
+    .timeline li.past { opacity: .5; }
+    .timeline li.now b { color: var(--accent); }
+    .timeline time { color: var(--muted); font-size: .9rem; }
+    .qa details { background: var(--surface-2); border-radius: 10px; padding: 12px 16px; margin-bottom: 10px; }
+    .qa summary { cursor: pointer; font-weight: 600; }
+    .qa p { margin: 8px 0 0; color: var(--muted); }
+    .scam li { margin-bottom: 8px; }
+    .countdown { display: flex; gap: 12px; flex-wrap: wrap; }
+    .countdown div { background: var(--surface-2); border-radius: 12px; padding: 12px 18px; text-align: center; min-width: 90px; }
+    .countdown b { display: block; font-size: 1.8rem; color: var(--brand); }
+    .doc-note { font-size: .82rem; color: var(--accent); display: block; }
+    @media (max-width: 600px) { .timeline li { grid-template-columns: 1fr; gap: 0; } .stay { grid-template-columns: 1fr 1fr; } .stay .remove { grid-column: span 2; justify-self: end; margin: 0 0 8px; } }
+  </style>
 </head>
 <body>
-  <header class="topbar no-print">
-    <a class="brand" href="#top" aria-label="سند — الصفحة الرئيسية">
-      <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path d="M16 3 4 8v7c0 7.2 5.1 12.4 12 14 6.9-1.6 12-6.8 12-14V8L16 3Z" fill="currentColor" opacity=".15"/><path d="M16 3 4 8v7c0 7.2 5.1 12.4 12 14 6.9-1.6 12-6.8 12-14V8L16 3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M11 16.5l3.2 3.2L21 13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>سَنَد</span>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="دوري — الرئيسية">
+      <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect x="5" y="4" width="22" height="25" rx="3" fill="currentColor" opacity=".15"/><rect x="5" y="4" width="22" height="25" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="14" r="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M11 23h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>دوري</span>
     </a>
     <nav class="topnav">
-      <a href="#why">لماذا سند؟</a>
-      <a href="#builder">ابنِ خطتك</a>
-      <a href="visa/">دوري — الفيزا</a>
+      <a href="#tools">الأدوات</a>
+      <a href="centers.html">دليل المراكز</a>
+      <a href="sanad/">سَنَد — الطوارئ</a>
       <button class="btn ghost small" id="themeToggle" type="button" aria-label="تبديل الوضع الليلي">◐</button>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero no-print">
+    <section class="hero">
       <div class="hero-text">
-        <p class="eyebrow">أول أداة عربية لخطط طوارئ العائلة</p>
-        <h1>حين تقع الكارثة،<br>لا وقت للتفكير.<br><span class="accent">فكّر الآن.</span></h1>
-        <p class="lead">زلزال، فيضان، حريق، انقطاع كهرباء طويل أو نزوح مفاجئ… أغلب العائلات العربية لا تملك خطة مكتوبة: لا يعرف الأطفال رقمًا يحفظونه، ولا مكانًا يلتقون فيه، ولا أحد يتذكر أدوية الجدّة. <strong>سَنَد</strong> يبني لك خطة كاملة في ١٠ دقائق، تطبعها وتعلّقها وتوزّع بطاقاتها في جيوب أبنائك.</p>
+        <p class="eyebrow">🇩🇿 للجزائريين — من حجز الموعد حتى ختم الجواز</p>
+        <h1>الموعد صعب.<br>لا تجعل <span class="accent">الرفض</span><br>أصعب.</h1>
+        <p class="lead">تنتظر أسابيع للحصول على موعد فيزا، ثم يُرفض الملف بسبب كشف حساب قديم أو تأمين ناقص. <strong>دوري</strong> يجهّز ملفك خطوة بخطوة، ويحسب لك أيام شنغن، ويذكّرك بما يلزم قبل الموعد، ويحميك من باعة المواعيد.</p>
         <div class="hero-cta">
-          <a class="btn primary" href="#builder">ابدأ خطة عائلتي — مجانًا</a>
-          <span class="privacy-note">🔒 لا تسجيل، لا خوادم. بياناتك لا تغادر جهازك.</span>
+          <a class="btn primary" href="#tools">جهّز ملفي الآن</a>
+          <a class="btn ghost" href="centers.html">🔗 روابط الحجز الرسمية</a>
+          <span class="privacy-note">🔒 مجاني، دون تسجيل. بياناتك على جهازك فقط.</span>
         </div>
       </div>
       <div class="hero-card" aria-hidden="true">
         <div class="mini-card">
-          <div class="mini-head">بطاقة طوارئ — <b>ليان</b></div>
-          <div class="mini-row"><span>نلتقي عند</span><b>باب المسجد الكبير</b></div>
-          <div class="mini-row"><span>اتصل بـ</span><b>خالي سامي</b></div>
-          <div class="mini-row"><span>فصيلة الدم</span><b>O+</b></div>
-          <div class="mini-row"><span>حساسية</span><b>البنسلين</b></div>
+          <div class="mini-head">ملف شنغن — سياحة</div>
+          <div class="mini-check done">جواز صالح ٣ أشهر بعد العودة</div>
+          <div class="mini-check done">تأمين ٣٠٬٠٠٠ € على الأقل</div>
+          <div class="mini-check">كشف حساب ٣ أشهر</div>
+          <div class="mini-check">حجز الفندق</div>
         </div>
         <div class="mini-card offset">
-          <div class="mini-head">حقيبة الطوارئ</div>
-          <div class="mini-check done">ماء — ٣٦ لترًا</div>
-          <div class="mini-check done">مصباح + بطاريات</div>
-          <div class="mini-check">نسخ من الوثائق</div>
-          <div class="mini-check">أدوية أسبوعين</div>
+          <div class="mini-head">موعدك بعد</div>
+          <div class="mini-row"><span>أيام</span><b>١٢</b></div>
+          <div class="mini-row"><span>المتبقي من شنغن</span><b>٧٤ يومًا</b></div>
+          <div class="mini-row"><span>الآن</span><b>اطبع استمارة الطلب</b></div>
         </div>
       </div>
     </section>
 
-    <section id="why" class="why no-print">
-      <h2>ما الذي يجعل سند مختلفًا؟</h2>
-      <div class="features">
-        <article class="feature">
-          <div class="f-icon">١</div>
-          <h3>مصمّم لواقعنا</h3>
-          <p>يشمل سيناريوهات تخص منطقتنا: موجات الحر، العواصف الرملية، الزلازل، الفيضانات المفاجئة، والنزوح — وليس ترجمة لقائمة أجنبية.</p>
-        </article>
-        <article class="feature">
-          <div class="f-icon">٢</div>
-          <h3>حسابات تلقائية</h3>
-          <p>يحسب كميات الماء والطعام والأدوية حسب عدد أفراد عائلتك وأعمارهم، ويضيف احتياجات الرضّع وكبار السن تلقائيًا.</p>
-        </article>
-        <article class="feature">
-          <div class="f-icon">٣</div>
-          <h3>بطاقة جيب لكل فرد</h3>
-          <p>بطاقة صغيرة باسم كل شخص: أين نلتقي، بمن نتصل، فصيلة الدم والحساسية — يحملها الطفل في حقيبته المدرسية.</p>
-        </article>
-        <article class="feature">
-          <div class="f-icon">٤</div>
-          <h3>خصوصية كاملة</h3>
-          <p>يعمل دون إنترنت بعد التحميل، ويحفظ في متصفحك فقط. صدّر الخطة كملف واحتفظ بنسخة لدى قريب موثوق.</p>
-        </article>
-      </div>
-      <div class="stats">
-        <div><b>٧٢</b><span>ساعة — المدة التي قد تنتظرها العائلة قبل وصول المساعدة</span></div>
-        <div><b>٣ لتر</b><span>ماء للشخص يوميًا على الأقل للشرب والنظافة الأساسية</span></div>
-        <div><b>٢</b><span>نقطتا التقاء: قرب البيت، وخارج الحي</span></div>
-      </div>
-    </section>
-
-    <section id="builder" class="builder">
-      <div class="builder-head no-print">
-        <h2>ابنِ خطة عائلتك</h2>
-        <p class="muted">تُحفظ إجاباتك تلقائيًا على هذا الجهاز. يمكنك التوقف والعودة لاحقًا.</p>
-        <ol class="steps" id="stepper"></ol>
+    <section id="tools" class="builder" style="max-width:1000px">
+      <div class="tabs" role="tablist">
+        <button class="btn ghost" role="tab" data-tab="docs" aria-selected="true">📋 قائمة الوثائق</button>
+        <button class="btn ghost" role="tab" data-tab="appt" aria-selected="false">📅 موعدي</button>
+        <button class="btn ghost" role="tab" data-tab="calc" aria-selected="false">🧮 حاسبة ٩٠/١٨٠</button>
+        <button class="btn ghost" role="tab" data-tab="interview" aria-selected="false">🎤 المقابلة</button>
+        <button class="btn ghost" role="tab" data-tab="scam" aria-selected="false">⚠️ احذر النصب</button>
       </div>
 
-      <form id="planForm" class="panel no-print" autocomplete="off" novalidate>
-        <!-- Step 1 -->
-        <fieldset class="step" data-step="0" data-title="العائلة">
-          <legend>من في عائلتك؟</legend>
-          <p class="hint">أضف كل من يعيش معك. المعلومات الطبية تظهر فقط في الخطة المطبوعة.</p>
-          <div class="grid2">
-            <label>اسم العائلة / عنوان الخطة<input name="familyName" placeholder="مثال: عائلة الأحمد"></label>
-            <label>المدينة<input name="city" placeholder="مثال: عمّان"></label>
-          </div>
-          <label>عنوان المنزل (لمن يقرأ البطاقة)<input name="address" placeholder="الحي، الشارع، أقرب معلم"></label>
-          <div id="members" class="rows"></div>
-          <button type="button" class="btn ghost" data-add="member">＋ إضافة فرد</button>
-          <label class="check-inline"><input type="checkbox" name="hasPets"> لدينا حيوانات أليفة</label>
-        </fieldset>
-
-        <!-- Step 2 -->
-        <fieldset class="step" data-step="1" data-title="جهات الاتصال">
-          <legend>بمن نتصل؟</legend>
-          <p class="hint">اختر قريبًا يعيش <b>خارج مدينتك</b> — في الكوارث تنقطع الاتصالات المحلية غالبًا بينما تبقى المكالمات البعيدة ممكنة، فيصبح هو "مركز الأخبار" للعائلة.</p>
-          <div id="contacts" class="rows"></div>
-          <button type="button" class="btn ghost" data-add="contact">＋ إضافة جهة اتصال</button>
-          <div class="grid3">
-            <label>رقم الإسعاف<input name="ambulance" inputmode="tel" placeholder="مثال: 997"></label>
-            <label>رقم الدفاع المدني / الإطفاء<input name="fire" inputmode="tel" placeholder="مثال: 998"></label>
-            <label>رقم الشرطة<input name="police" inputmode="tel" placeholder="مثال: 999"></label>
-          </div>
-          <div class="grid2">
-            <label>طبيب العائلة / العيادة<input name="doctor" placeholder="الاسم والرقم"></label>
-            <label>مدرسة الأطفال<input name="school" placeholder="الاسم والرقم"></label>
-          </div>
-        </fieldset>
-
-        <!-- Step 3 -->
-        <fieldset class="step" data-step="2" data-title="نقاط الالتقاء">
-          <legend>أين نلتقي إن تفرّقنا؟</legend>
-          <p class="hint">اختر أماكن يعرفها الجميع، حتى الأطفال، ويسهل الوصول إليها مشيًا.</p>
-          <label>١. قرب البيت (في حالة حريق مثلًا)<input name="meet1" placeholder="مثال: عند شجرة الزيتون أمام بيت الجيران"></label>
-          <label>٢. خارج الحي (إن تعذّر الرجوع للبيت)<input name="meet2" placeholder="مثال: ساحة المسجد الكبير"></label>
-          <label>٣. خارج المدينة (في حالة الإخلاء)<input name="meet3" placeholder="مثال: بيت الجدّ في الزرقاء"></label>
-          <div class="grid2">
-            <label>كلمة السر العائلية<input name="codeword" placeholder="كلمة يعرفها أفراد العائلة فقط"></label>
-            <label>من يأخذ الأطفال من المدرسة؟<input name="pickup" placeholder="الاسم الأول ثم البديل"></label>
-          </div>
-          <p class="hint small">كلمة السر تحمي الأطفال: لا يذهبون مع أي شخص لا يعرفها، حتى لو قال إن الأهل أرسلوه.</p>
-        </fieldset>
-
-        <!-- Step 4 -->
-        <fieldset class="step" data-step="3" data-title="المخاطر">
-          <legend>ما المخاطر المحتملة في منطقتك؟</legend>
-          <p class="hint">اختر ما يناسب منطقتك وستضيف الخطة تعليمات محددة لكل خطر.</p>
-          <div class="chips" id="hazards"></div>
-          <div class="grid2">
-            <label>مكان قاطع الكهرباء الرئيسي<input name="breaker" placeholder="مثال: بجانب باب المطبخ"></label>
-            <label>محبس الماء / صمام الغاز<input name="valves" placeholder="مثال: السطح / خلف البيت"></label>
-          </div>
-          <label>أين تُحفظ حقيبة الطوارئ؟<input name="kitPlace" placeholder="مثال: الخزانة بجانب الباب الرئيسي"></label>
-        </fieldset>
-
-        <!-- Step 5 -->
-        <fieldset class="step" data-step="4" data-title="الحقيبة">
-          <legend>حقيبة الطوارئ</legend>
-          <div class="grid2">
-            <label>عدد أيام الاكتفاء
-              <select name="days">
-                <option value="3">٣ أيام (الحد الأدنى)</option>
-                <option value="7">٧ أيام (موصى به)</option>
-                <option value="14">١٤ يومًا (مناطق نائية / نزاعات)</option>
-              </select>
-            </label>
-            <div class="kit-progress"><span>جاهزية الحقيبة</span><div class="bar"><i id="kitBar"></i></div><b id="kitPct">٠٪</b></div>
-          </div>
-          <p class="hint">الكميات محسوبة لعائلتك. أشِّر على ما جهّزته فعلًا.</p>
-          <div id="kit" class="kit"></div>
-        </fieldset>
-
-        <div class="form-nav">
-          <button type="button" class="btn ghost" id="prevBtn">→ السابق</button>
-          <span class="saved" id="savedNote" aria-live="polite"></span>
-          <button type="button" class="btn primary" id="nextBtn">التالي ←</button>
+      <!-- Documents -->
+      <div class="tool panel active" id="tool-docs" role="tabpanel">
+        <h2>قائمة وثائقك</h2>
+        <p class="hint">اختر نوع التأشيرة ووضعك المهني، وستظهر لك قائمة الوثائق الخاصة بحالتك. أشِّر على ما جهّزته.</p>
+        <div class="grid3">
+          <label>نوع التأشيرة
+            <select id="vType">
+              <option value="tourism">سياحة</option>
+              <option value="family">زيارة عائلية / خاصة</option>
+              <option value="business">عمل / أعمال تجارية</option>
+              <option value="study">دراسة</option>
+              <option value="medical">علاج</option>
+            </select>
+          </label>
+          <label>وضعك
+            <select id="vStatus">
+              <option value="employee">موظف</option>
+              <option value="self">تاجر / صاحب نشاط حر</option>
+              <option value="student">طالب</option>
+              <option value="retired">متقاعد</option>
+              <option value="none">بدون عمل / ربّة بيت (بكفيل)</option>
+            </select>
+          </label>
+          <label>المسافر
+            <select id="vWho">
+              <option value="adult">بالغ</option>
+              <option value="minor">قاصر (أقل من ١٨)</option>
+            </select>
+          </label>
         </div>
-      </form>
+        <div class="kit-progress" style="margin:4px 0 16px"><span>جاهزية الملف</span><div class="bar"><i id="docBar"></i></div><b id="docPct">٠٪</b></div>
+        <div id="docList" class="kit"></div>
+        <p class="hint small" style="margin-top:16px">القائمة مبنية على متطلبات شنغن العامة للمقيمين في الجزائر. كل سفارة قد تطلب وثائق إضافية — راجع دائمًا الموقع الرسمي للسفارة أو مركز التأشيرات المعتمد قبل موعدك.</p>
+      </div>
 
-      <!-- Generated plan -->
-      <section id="plan" class="plan" hidden>
-        <div class="plan-actions no-print">
-          <button class="btn primary" type="button" id="printBtn">🖨️ طباعة الخطة والبطاقات</button>
-          <button class="btn ghost" type="button" id="editBtn">✎ تعديل</button>
-          <button class="btn ghost" type="button" id="exportBtn">⬇ تصدير نسخة</button>
-          <label class="btn ghost file">⬆ استيراد<input type="file" id="importFile" accept="application/json"></label>
-          <button class="btn ghost danger" type="button" id="resetBtn">مسح كل شيء</button>
+      <!-- Appointment -->
+      <div class="tool panel" id="tool-appt" role="tabpanel">
+        <h2>موعدي</h2>
+        <p class="hint">أدخل تاريخ موعدك وتاريخ سفرك، وسنرتّب لك ما يجب فعله ومتى.</p>
+        <div class="grid3">
+          <label>تاريخ الموعد<input type="date" id="apptDate"></label>
+          <label>ساعة الموعد<input type="time" id="apptTime"></label>
+          <label>تاريخ السفر المتوقع<input type="date" id="tripDate"></label>
         </div>
-        <div id="planOut"></div>
-      </section>
+        <label>المركز / السفارة<input id="apptPlace" placeholder="مثال: مركز التأشيرات — الجزائر العاصمة"></label>
+        <div id="apptOut"></div>
+      </div>
+
+      <!-- 90/180 -->
+      <div class="tool panel" id="tool-calc" role="tabpanel">
+        <h2>حاسبة ٩٠/١٨٠ يومًا (شنغن)</h2>
+        <p class="hint">في أي فترة ١٨٠ يومًا لا يجوز أن تتجاوز إقامتك في دول شنغن ٩٠ يومًا. يومَا الدخول والخروج يُحسبان كاملين. أدخل إقاماتك السابقة ثم رحلتك المقبلة.</p>
+        <h3 style="font-size:1.05rem">إقاماتك السابقة في شنغن</h3>
+        <div id="stays" class="rows"></div>
+        <button type="button" class="btn ghost" id="addStay">＋ إضافة إقامة</button>
+        <h3 style="font-size:1.05rem;margin-top:24px">رحلتك المقبلة</h3>
+        <div class="grid2">
+          <label>تاريخ الدخول<input type="date" id="planIn"></label>
+          <label>تاريخ الخروج<input type="date" id="planOut"></label>
+        </div>
+        <div id="calcOut"></div>
+      </div>
+
+      <!-- Interview -->
+      <div class="tool panel qa" id="tool-interview" role="tabpanel">
+        <h2>أسئلة المقابلة الشائعة</h2>
+        <p class="hint">القاعدة الذهبية: أجب بصدق، باختصار، وبما يطابق وثائقك تمامًا. أي تناقض بين كلامك وملفك أخطر من أي جواب ضعيف.</p>
+        <div id="qaList"></div>
+      </div>
+
+      <!-- Scam -->
+      <div class="tool panel" id="tool-scam" role="tabpanel">
+        <h2>احذر النصب</h2>
+        <div class="warn" style="margin-bottom:18px"><b>المواعيد مجانية.</b> لا تدفع إلا رسوم التأشيرة الرسمية ورسوم الخدمة المعلنة لدى مركز التأشيرات المعتمد. من يبيعك "موعدًا مضمونًا" يخالف القانون، وقد يُلغى موعدك أو تُستعمل بياناتك.</div>
+        <ul class="scam">
+          <li><b>تحقّق من العنوان:</b> احجز فقط عبر الرابط الموجود على الموقع الرسمي لسفارة البلد الذي تقصده — لا عبر روابط فيسبوك أو واتساب.</li>
+          <li><b>لا تعطِ كلمة سر حسابك</b> لأي وكيل أو "سمسار". الحساب باسمك ومسؤوليتك.</li>
+          <li><b>لا وجود لتأشيرة مضمونة.</b> القرار للقنصلية وحدها، ولا أحد يستطيع التأثير فيه.</li>
+          <li><b>الوثائق المزوّرة</b> (حجوزات أو كشوف حسابات أو شهادات عمل) تؤدي إلى الرفض وقد تؤدي إلى منعك من دخول شنغن لسنوات.</li>
+          <li><b>رسوم شنغن الرسمية:</b> ٩٠ € للبالغين، ٤٥ € للأطفال من ٦ إلى ١٢ سنة، ومجانًا تحت ٦ سنوات (تُدفع بالدينار الجزائري). رسوم الخدمة لمركز التأشيرات منفصلة ومعلنة على موقعه.</li>
+          <li><b>بعد الرفض:</b> من حقك معرفة سبب الرفض كتابيًا والطعن فيه. اقرأ السبب جيدًا وأصلحه قبل التقديم من جديد.</li>
+        </ul>
+      </div>
     </section>
   </main>
 
-  <footer class="footer no-print">
-    <p>سَنَد — أداة مفتوحة المصدر للتوعية والاستعداد. لا تُغني عن تعليمات الدفاع المدني في بلدك.</p>
-    <p class="muted small">راجع خطتك كل ٦ أشهر، وبدّل الماء والأدوية منتهية الصلاحية.</p>
+  <footer class="footer">
+    <p>دوري — أداة جزائرية مستقلة للتوعية، غير تابعة لأي سفارة أو مركز تأشيرات.</p>
+    <p class="muted small">المعلومات عامة وقد تتغير. المرجع النهائي هو الموقع الرسمي للسفارة.</p>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="visa.js"></script>
 </body>
 </html>
