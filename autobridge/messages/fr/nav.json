@@ -1,0 +1,16 @@
+{
+  "home": "Accueil AutoBridge DZ",
+  "main": "Navigation principale",
+  "vehicles": "Véhicules",
+  "estimate": "Estimer le coût",
+  "howItWorks": "Comment ça marche",
+  "partners": "Fournisseurs et partenaires",
+  "account": "Mon compte",
+  "supplierPortal": "Espace fournisseur",
+  "partnerPortal": "Espace partenaire",
+  "admin": "Administration",
+  "signIn": "Se connecter",
+  "signUp": "Créer un compte",
+  "signOut": "Se déconnecter",
+  "notificationsCount": "Notifications ({count} non lues)"
+}

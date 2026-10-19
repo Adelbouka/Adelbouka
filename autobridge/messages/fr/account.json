@@ -1,0 +1,126 @@
+{
+  "title": "Mon compte",
+  "navOverview": "Vue d'ensemble",
+  "navRequests": "Mes demandes",
+  "navFavorites": "Favoris",
+  "navEstimates": "Estimations",
+  "navNotifications": "Notifications",
+  "navProfile": "Profil",
+  "navPrivacy": "Confidentialité",
+  "welcome": "Bonjour {name}",
+  "overviewSubtitle": "Suivez vos demandes, devis et véhicules enregistrés.",
+  "newRequest": "Nouvelle demande",
+  "passwordUpdated": "Votre mot de passe a été mis à jour.",
+  "openRequests": "Demandes en cours",
+  "savedVehicles": "Véhicules enregistrés",
+  "unreadNotifications": "Notifications non lues",
+  "recentRequests": "Demandes récentes",
+  "viewAll": "Tout voir",
+  "noRequests": "Aucune demande pour le moment",
+  "noRequestsText": "Parcourez les annonces ou envoyez une recherche personnalisée.",
+  "browse": "Parcourir les véhicules",
+  "latestNotifications": "Dernières notifications",
+  "becomeSupplier": "Devenir fournisseur",
+  "becomeSupplierText": "Publiez des véhicules après approbation de votre entreprise.",
+  "becomePartner": "Devenir partenaire de services",
+  "becomePartnerText": "Inspection, transport, transit… recevez des demandes de service.",
+  "email": "E-mail",
+  "emailHint": "L'adresse de connexion ne peut pas être modifiée ici.",
+  "fullName": "Nom complet",
+  "phone": "Téléphone",
+  "wilaya": "Wilaya",
+  "language": "Langue préférée",
+  "notifyEmail": "Recevoir les notifications par e-mail",
+  "notifyInAppAlways": "Les notifications restent toujours consultables dans votre compte.",
+  "profileSubtitle": "Nous ne collectons que les informations nécessaires au traitement de vos demandes.",
+  "personalInfo": "Informations personnelles",
+  "changePassword": "Changer le mot de passe",
+  "requestsSubtitle": "Toutes vos demandes d'achat et leur statut.",
+  "reference": "Référence",
+  "vehicle": "Véhicule",
+  "type": "Type",
+  "status": "Statut",
+  "updated": "Mise à jour",
+  "favoritesSubtitle": "Véhicules que vous avez enregistrés.",
+  "favoritesWithdrawn": "{count, plural, one {# véhicule enregistré n'est plus publié.} other {# véhicules enregistrés ne sont plus publiés.}}",
+  "noFavorites": "Aucun véhicule enregistré",
+  "estimatesSubtitle": "Vos estimations enregistrées, avec la version des hypothèses utilisées.",
+  "newEstimate": "Nouvelle estimation",
+  "vehiclePrice": "Prix du véhicule",
+  "estimatedTotal": "Total estimé",
+  "completeness": "Complétude",
+  "useInRequest": "Utiliser dans une demande",
+  "noEstimates": "Aucune estimation enregistrée",
+  "notificationsSubtitle": "Mises à jour de vos demandes et de vos comptes.",
+  "markAllRead": "Tout marquer comme lu",
+  "unread": "non lue",
+  "noNotifications": "Aucune notification",
+  "privacySubtitle": "Exercez vos droits sur vos données personnelles.",
+  "dataRequestTitle": "Demande relative à vos données",
+  "dataRequestHint": "Accès, rectification ou suppression : notre équipe traite chaque demande et vous informe de son suivi.",
+  "sendDataRequest": "Envoyer la demande",
+  "dataRequestSent": "Demande enregistrée.",
+  "dataRequestKind": "Type de demande",
+  "dataRequestDetails": "Précisions (facultatif)",
+  "deletionExplain": "En cas de suppression, vos données personnelles sont retirées ; les enregistrements que la loi impose de conserver sont anonymisés.",
+  "myDataRequests": "Mes demandes",
+  "readPrivacy": "Lire la politique de confidentialité",
+  "notificationTypes": {
+    "generic": "Nouvelle notification.",
+    "request": {
+      "status_changed": "Demande {reference} : {status}.",
+      "created": "Nouvelle demande d'achat {reference}.",
+      "customer_status_changed": "Le client a modifié la demande {reference} : {status}.",
+      "forwarded_to_supplier": "Nouvelle demande transmise : {reference}.",
+      "assigned_to_you": "Une demande vous a été attribuée.",
+      "legal_review": "Examen juridique de la demande {reference} : {decision}.",
+      "milestone": "Demande {reference} : {kind}."
+    },
+    "quotation": {
+      "submitted": "Nouveau devis soumis pour la demande {reference}.",
+      "received": "Vous avez reçu un devis ({quotation}) pour la demande {reference}.",
+      "rejected": "Votre devis {quotation} a été refusé : {reason}",
+      "withdrawn": "Le devis {quotation} a été retiré.",
+      "accepted": "Le devis {quotation} (demande {reference}) a été accepté.",
+      "declined": "Le devis {quotation} (demande {reference}) a été décliné."
+    },
+    "supplier": {
+      "application_submitted": "Nouvelle demande d'inscription fournisseur : {name}",
+      "status": {
+        "approved": "Votre compte fournisseur « {name} » a été approuvé.",
+        "rejected": "Votre demande fournisseur a été refusée : {reason}",
+        "suspended": "Votre compte fournisseur a été suspendu : {reason}",
+        "pending": "Votre demande fournisseur est de nouveau en examen."
+      }
+    },
+    "partner": {
+      "application_submitted": "Nouvelle demande d'inscription partenaire : {name}",
+      "status": {
+        "approved": "Votre compte partenaire « {name} » a été approuvé.",
+        "rejected": "Votre demande partenaire a été refusée : {reason}",
+        "suspended": "Votre compte partenaire a été suspendu : {reason}",
+        "pending": "Votre demande partenaire est de nouveau en examen."
+      }
+    },
+    "vehicle": {
+      "pending_review": "Annonce à examiner : {slug}",
+      "approved": "Votre annonce {slug} a été publiée.",
+      "rejected": "Votre annonce {slug} a été refusée : {reason}"
+    },
+    "report": {
+      "created": "Nouveau signalement d'annonce ({reason})."
+    },
+    "data_request": {
+      "created": "Nouvelle demande relative aux données personnelles ({kind})."
+    },
+    "service_request": {
+      "created": "Nouvelle demande de service : {reference}.",
+      "status_changed": "Demande de service {reference} : {status}."
+    },
+    "service_quote": {
+      "submitted": "Nouveau devis de service pour {reference}.",
+      "accepted": "Votre devis pour {reference} a été accepté.",
+      "declined": "Votre devis pour {reference} a été décliné."
+    }
+  }
+}

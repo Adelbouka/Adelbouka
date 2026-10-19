@@ -1,0 +1,223 @@
+{
+  "fuel": {
+    "petrol": "بنزين",
+    "diesel": "ديزل",
+    "hybrid": "هجين",
+    "plug_in_hybrid": "هجين قابل للشحن",
+    "electric": "كهربائي",
+    "lpg": "غاز البترول المميع",
+    "other": "أخرى"
+  },
+  "transmission": {
+    "manual": "يدوي",
+    "automatic": "أوتوماتيكي"
+  },
+  "body": {
+    "sedan": "سيدان",
+    "hatchback": "هاتشباك",
+    "suv": "رباعية الدفع",
+    "crossover": "كروس أوفر",
+    "pickup": "بيك آب",
+    "van": "فان",
+    "coupe": "كوبيه",
+    "wagon": "ستيشن",
+    "convertible": "مكشوفة",
+    "minivan": "ميني فان",
+    "other": "أخرى"
+  },
+  "condition": {
+    "new": "جديدة",
+    "used": "مستعملة"
+  },
+  "listingStatus": {
+    "draft": "مسودة",
+    "pending_review": "قيد المراجعة",
+    "published": "منشورة",
+    "rejected": "مرفوضة",
+    "archived": "مؤرشفة"
+  },
+  "availability": {
+    "available": "متاحة",
+    "reserved": "محجوزة",
+    "sold": "مباعة",
+    "unavailable": "غير متاحة"
+  },
+  "requestStatus": {
+    "draft": "مسودة",
+    "submitted": "مُرسَل",
+    "under_review": "قيد الدراسة",
+    "supplier_contacted": "تم التواصل مع المورد",
+    "quotation_received": "تم استلام عرض سعر (قيد التحقق)",
+    "awaiting_customer_decision": "في انتظار قرارك",
+    "accepted": "تم قبول العرض",
+    "in_progress": "قيد التنفيذ",
+    "completed": "مكتمل",
+    "cancelled": "ملغى",
+    "rejected": "مرفوض"
+  },
+  "requestAction": {
+    "submitted": "إرسال الطلب",
+    "under_review": "بدء الدراسة",
+    "supplier_contacted": "إحالة إلى المورد",
+    "quotation_received": "تسجيل استلام عرض",
+    "awaiting_customer_decision": "انتظار قرار الزبون",
+    "accepted": "قبول",
+    "in_progress": "بدء التنفيذ",
+    "completed": "تحديد كمكتمل",
+    "cancelled": "إلغاء الطلب",
+    "rejected": "رفض الطلب",
+    "draft": "مسودة"
+  },
+  "legalReview": {
+    "not_required": "غير مطلوبة",
+    "pending": "قيد الانتظار",
+    "approved": "معتمدة",
+    "blocked": "موقوفة"
+  },
+  "quotationStatus": {
+    "submitted": "قيد التحقق",
+    "sent": "مُرسل إلى الزبون",
+    "accepted": "مقبول",
+    "declined": "مرفوض من الزبون",
+    "withdrawn": "مسحوب",
+    "rejected": "مرفوض من الفريق",
+    "expired": "منتهي الصلاحية"
+  },
+  "feeKind": {
+    "vehicle_price": "سعر السيارة",
+    "domestic_transport": "النقل الداخلي (بلد المصدر)",
+    "international_shipping": "الشحن الدولي",
+    "insurance": "التأمين",
+    "inspection": "الفحص",
+    "taxes_and_customs": "الرسوم الجمركية والضرائب (تقدير)",
+    "documentation_admin": "الوثائق والمصاريف الإدارية",
+    "platform_service_fee": "رسوم خدمة المنصة",
+    "partner_service_fee": "أتعاب الشريك",
+    "other": "أخرى"
+  },
+  "feeParty": {
+    "supplier": "المورد",
+    "platform": "AutoBridge DZ",
+    "partner": "شريك مستقل",
+    "public_authority": "الإدارة العمومية",
+    "other": "طرف آخر"
+  },
+  "businessStatus": {
+    "pending": "قيد المراجعة",
+    "approved": "معتمد",
+    "rejected": "مرفوض",
+    "suspended": "موقوف"
+  },
+  "verificationCheck": {
+    "business_registration": "السجل التجاري",
+    "tax_registration": "التسجيل الضريبي",
+    "representative_identity": "هوية الممثل",
+    "business_address": "عنوان المؤسسة",
+    "phone_contact": "الاتصال الهاتفي",
+    "email_contact": "البريد الإلكتروني",
+    "site_visit": "زيارة ميدانية",
+    "trade_references": "مراجع تجارية",
+    "other": "تحقق آخر"
+  },
+  "verificationResult": {
+    "passed": "ناجح",
+    "failed": "غير ناجح",
+    "inconclusive": "غير حاسم"
+  },
+  "milestone": {
+    "supplier_confirmed_availability": "أكّد المورد التوفر",
+    "vehicle_inspected": "تم فحص السيارة",
+    "vehicle_purchased": "تم شراء السيارة",
+    "export_documents_ready": "وثائق التصدير جاهزة",
+    "shipped": "تم الشحن",
+    "arrived_at_port": "وصلت إلى الميناء",
+    "customs_cleared": "تم التخليص الجمركي",
+    "delivered_to_customer": "تم التسليم للزبون",
+    "other": "مرحلة أخرى"
+  },
+  "serviceStatus": {
+    "requested": "مطلوب",
+    "quoted": "تم إرسال عرض",
+    "accepted": "مقبول",
+    "in_progress": "قيد التنفيذ",
+    "completed": "مكتمل",
+    "cancelled": "ملغى"
+  },
+  "serviceQuoteStatus": {
+    "submitted": "مقدم",
+    "accepted": "مقبول",
+    "declined": "مرفوض",
+    "withdrawn": "مسحوب"
+  },
+  "contactMethod": {
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "whatsapp": "واتساب (تواصل يدوي)"
+  },
+  "documentType": {
+    "business_registration": "مستخرج السجل التجاري",
+    "tax_registration": "شهادة ضريبية",
+    "representative_id": "وثيقة هوية الممثل",
+    "proof_of_address": "إثبات العنوان",
+    "insurance_certificate": "شهادة التأمين",
+    "professional_license": "الاعتماد المهني",
+    "other": "وثيقة أخرى"
+  },
+  "reportReason": {
+    "incorrect_information": "معلومات غير صحيحة",
+    "suspected_fraud": "اشتباه في احتيال",
+    "no_longer_available": "السيارة لم تعد متاحة",
+    "duplicate": "إعلان مكرر",
+    "inappropriate": "محتوى غير لائق",
+    "other": "أخرى"
+  },
+  "reportStatus": {
+    "open": "مفتوح",
+    "reviewing": "قيد المعالجة",
+    "resolved": "تمت المعالجة",
+    "dismissed": "مرفوض"
+  },
+  "dataRequestKind": {
+    "access": "الاطلاع على بياناتي",
+    "correction": "تصحيح البيانات",
+    "deletion": "حذف الحساب"
+  },
+  "dataRequestStatus": {
+    "open": "مفتوح",
+    "in_progress": "قيد المعالجة",
+    "completed": "تمت المعالجة",
+    "rejected": "مرفوض"
+  },
+  "role": {
+    "admin": "مسؤول",
+    "staff": "فريق العمل"
+  },
+  "ruleMethod": {
+    "fixed": "مبلغ ثابت",
+    "percent_of_price": "% من سعر السيارة",
+    "quote_required": "حسب عرض السعر / التقييم"
+  },
+  "ruleSetStatus": {
+    "draft": "مسودة",
+    "active": "مفعّلة",
+    "retired": "مؤرشفة"
+  },
+  "sort": {
+    "newest": "الأحدث",
+    "price_asc": "السعر: من الأقل",
+    "price_desc": "السعر: من الأعلى",
+    "year_desc": "السنة: الأحدث أولًا",
+    "year_asc": "السنة: الأقدم أولًا",
+    "mileage_asc": "أقل عدد كيلومترات"
+  },
+  "requestType": {
+    "listed_vehicle": "سيارة من إعلان",
+    "custom_search": "بحث مخصص"
+  },
+  "actorRole": {
+    "customer": "الزبون",
+    "staff": "فريق AutoBridge",
+    "supplier": "المورد",
+    "system": "تلقائي"
+  }
+}

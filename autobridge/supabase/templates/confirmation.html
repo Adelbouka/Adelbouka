@@ -1,0 +1,18 @@
+<!doctype html>
+<html><body style="font-family:Arial,Helvetica,sans-serif;color:#1c1917;background:#fafaf9;padding:24px">
+  <div style="max-width:520px;margin:auto;background:#fff;border:1px solid #e7e5e4;border-radius:12px;padding:24px">
+    <h2 style="margin:0 0 16px">AutoBridge DZ</h2>
+    <div dir="rtl" style="text-align:right">
+      <p>مرحبًا،</p>
+      <p>لتفعيل حسابك على AutoBridge DZ، يرجى تأكيد بريدك الإلكتروني:</p>
+      <p><a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=email&next=/{{ .Data.locale }}/account" style="background:#1e3a8a;color:#fff;padding:10px 18px;border-radius:8px;text-decoration:none;display:inline-block">تأكيد البريد الإلكتروني</a></p>
+    </div>
+    <hr style="border:none;border-top:1px solid #e7e5e4;margin:20px 0">
+    <div dir="ltr">
+      <p>Bonjour,</p>
+      <p>Pour activer votre compte AutoBridge DZ, veuillez confirmer votre adresse e-mail :</p>
+      <p><a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=email&next=/{{ .Data.locale }}/account" style="background:#1e3a8a;color:#fff;padding:10px 18px;border-radius:8px;text-decoration:none;display:inline-block">Confirmer l'e-mail</a></p>
+    </div>
+    <p style="color:#78716c;font-size:12px">Si vous n'êtes pas à l'origine de cette demande, ignorez ce message. / إذا لم تطلب ذلك، تجاهل هذه الرسالة.</p>
+  </div>
+</body></html>
